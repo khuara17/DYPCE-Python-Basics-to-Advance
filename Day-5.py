@@ -217,14 +217,14 @@ x *= 2 # x = x * 2
 # 64 32 16 8 4 2 1  
 
 
-print(5 | 7)
+# print(5 | 7)
 # 101             =   4 +  0 + 1 =   5  =   4 + 1   = 101
 # |
 # 111              = 4 + 2 + 1 = 7
 # ----
 # 111 = 7     
 
-print(4 & 7)
+# print(4 & 7)
 # 100             =   4 +  0 + 1 =   5  =   4 + 1   = 101
 # &
 # 111              = 4 + 2 + 1 = 7
@@ -239,7 +239,7 @@ a = 5   # ==  101
 
 #Left Shift  0000 0101  = 0000 1010 = 0001 0100 = 20
 a <<= 2  #  1010
-print(a)
+# print(a)
 #XOR:- odd :- 1 and even :- 0 
 t = 5
 v = 7
@@ -249,7 +249,7 @@ c = t ^ v
 # 111              = 4 + 2 + 1 = 7
 # ----
 # 010 = 2
-print(c) 
+# print(c) 
 
 ####### Comparison Operators ######## 
 
@@ -278,12 +278,17 @@ a = 4
 # Identity Operators : is , is not
 # mystring = 'hello'
 # m = "hello"
-c = 'ee'
+c = 8888
 d = c
-e = 'e' * 2
+h = 'e'
+e = 8888
+f= 8888
+print(id(c),id(d),id(e),id(f))
+c = 8888
+c = 8880
 # print(c)
-# print(e)
-
+print(d)
+print(id(c),id(d),id(e))
 # print('ee' is 'e' * 2)
 
 # print(c == e)
