@@ -99,7 +99,11 @@ class Showroom:
 Ford = Car('Ford', 60000)
 Maruti = Car('maruti',40000)
 Ferarri = Car('Ferarri',80000)
+Ford.price
 
+res = [1,2,3]
+for i in res:
+    print(i)
 xyz = Showroom()
 res = xyz.SortCars([Ford,Maruti,Ferarri])
 for i in res:
