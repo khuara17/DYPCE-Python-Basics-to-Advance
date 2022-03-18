@@ -101,8 +101,101 @@ class Derived(Base1,Base2,Base3):
     def printPrentattr(self):
         print(self.myattr1,self.myattr2,self.myattr3)
 
-ob = Derived()
-ob.printPrentattr()
+# ob = Derived()
+# ob.printPrentattr()
 
 
+'''
 
+3. Multilevel inheritance: 
+
+When we have a child and grandchild relationship. 
+
+A - B - C
+
+Example:    
+    class c(B):
+        pass
+
+    class B(A):
+        pass
+'''
+
+class Base:
+    def __init__(self,name) -> None:
+        self.name = name
+
+    def getName(self):
+        print(self.name)
+
+class Child(Base):
+    def __init__(self,name,age) -> None:
+        # super().__init__(name)
+        Base.__init__(self,name)
+        self.age = age
+
+    def getAge(self):
+        print(self.age)
+
+class Grandchild(Child):
+    def __init__(self,name,age,address) -> None:
+        Child.__init__(self,name,age)
+        self.address = address
+        print(self.name,self.age,self.address)
+
+
+    def GetAddr(self):
+        print(self.address)
+        
+
+
+# myclass = Grandchild('Reva',20,'Mumbai')
+# myclass.getAge()
+# myclass.getName()
+# myclass.GetAddr()
+
+
+'''
+
+4.  Hybrid inheritance: 
+
+This form combines more than one form of inheritance. Basically, 
+it is a blend of more than one type of inheritance.    
+
+Example:    
+    class c(B,D):
+        pass
+
+    class B(A):
+        pass
+'''
+class Test:
+    pass
+class Base:
+    def __init__(self,name) -> None:
+        self.name = name
+
+    def getName(self):
+        print(self.name)
+
+class Child(Base):
+    def __init__(self,name,age) -> None:
+        # super().__init__(name)
+        Base.__init__(self,name)
+        self.age = age
+
+    def setAge(self):
+        print(self.age)
+
+class Grandchild(Test,Child):
+    def __init__(self,name,age,address) -> None:
+        Child.__init__(self,name,age)
+        self.address = address
+        print(self.name,self.age,self.address)
+
+
+    def GetAddr(self):
+        print(self.address)
+
+
+Myclass = Grandchild('Reva',20,'Mumbai')

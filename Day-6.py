@@ -43,8 +43,8 @@ t,v = 8,9
 ######## Function Call ########
 
 # myfunction(t,v) # When function is returning nothing
-x = myfunction(t,v) # When function is returning Some values
-print(x)
+# x = myfunction(t,v) # When function is returning Some values
+# print(x)
 
 ############### DocString ########
 
@@ -164,7 +164,7 @@ def MyFunction(mylist,mytuple):
     for i in mylist:
         print(i)
 
-MyFunction(ls,MyTuple)
+# MyFunction(ls,MyTuple)
 
 ################# Problem 2 ################
 
@@ -244,24 +244,21 @@ reqd_quantity=[3,10,12]
 
 
 ######## Scope (Local and Global Variables) ###########
-# global : y = 40, x = 90
-# local :  
+# global : x = 10 , mylocal = 50
+# myfunctio :- local :  mylocal = 10,
 
-# y = 40
-# x = 90
-# y = 00
+
+mylocal = 50
 
 def myfunction():
-    global y 
-    y = 30
-    # def myinsidefunction():
-        # z = 20
-        # print(x) 
-    # myinsidefunction()
-    
-    # x = x + y
-    print(y)
+    # global x
+    myvar = 20
+    print(x)
+    print(mylocal)
 
-# myfunction()
-# print(y)
-# print(x)
+def another():
+    print(myvar)
+
+another()
+
+# print(mylocal2)
