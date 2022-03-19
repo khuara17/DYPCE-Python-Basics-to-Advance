@@ -2,7 +2,15 @@
 
 '''# Write a function TO DO MULTIPLICATION WITOUT USING THE * OPERATOR.
 '''
+# 4 * 2 = 2 + 2 + 2 + 2 == 4 + 4 = 8
 
+def MULTIPLICATION(a:int,b:int) -> int:
+	sum = 0
+	for i in range(b):
+		sum += a
+	return sum
+
+# print(MULTIPLICATION(10,20))
 
 ######### Prob 2 ############
 
@@ -21,6 +29,28 @@ evenly_divisible(1, 10, 3) ➞ 18
 # 3 + 6 + 9 = 18
 '''
 
+# def problem2(a:int,b:int,c:int) -> int:
+# 	sum = 0
+# 	a += c- a%c
+# 	print(a)
+# 	for i in range(a,b+1,c):
+# 		sum += i
+# 	return sum
+
+# print("problem2 : ", problem2(1,10,3))
+
+# def problem2(a:int,b:int,c:int) -> int:
+# 	sum = 0
+# 	for i in range(a,b+1):
+# 		if i%c == 0:
+# 			sum += i
+# 	return sum
+
+# print(problem2(1,10,2))
+
+
+
+
 
 ############## Problem 3 ###############3333
 
@@ -34,6 +64,11 @@ correct_signs("13 > 44 > 33 > 1") ➞ False
 
 correct_signs("1 < 2 < 6 < 9 > 3") ➞ True
 '''
+
+def correct_signs(mylst):
+    print(eval(mylst))
+
+correct_signs("1 < 2 < 6 < 9 > 3")
 
 ############## Problem 4 ###############
 '''
