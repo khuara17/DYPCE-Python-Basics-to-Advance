@@ -305,12 +305,50 @@ class Person:
     age = 23
     name = "Adam"
 
-person = Person()
-print('The age is:', getattr(person, "address"))
-print('The age is:', person.age)
+# person = Person()
+# print('The age is:', getattr(person, "address"))
+# print('The age is:', person.age)
 
 
+######### MAP #######
 
+'''
+Syntax
+map(function, iterables)
+'''
+
+# ip = list(  map(  int,   input("Enter a comma seperated no").strip().split('|')    )   )
+
+# print(ip)
+# int('4')
+#'1,2,3,4' = ['1','2','3','4']
+
+######## List comprehension #######
+
+'''
+The Syntax
+newlist = [expression for item in iterable if condition == True]
+'''
+# x = []
+
+# for i in mytuple:
+#     x.append(str(i))
+
+
+mytuple = (2,3,4)
+x = [str(x)+'t' for x in mytuple if x in (2,3)]
+print(x)
+
+########## Join ########
+
+### Syntax ##
+# String.join(iterable)
+
+mytuple = (2,3,4)
+
+s = '#'.join(   [str(i) for i in mytuple]     )
+
+print(s)
 
 
 

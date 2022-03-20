@@ -68,7 +68,7 @@ correct_signs("1 < 2 < 6 < 9 > 3") ➞ True
 def correct_signs(mylst):
     print(eval(mylst))
 
-correct_signs("1 < 2 < 6 < 9 > 3")
+# correct_signs("1 < 2 < 6 < 9 > 3")
 
 ############## Problem 4 ###############
 '''
@@ -83,6 +83,28 @@ move_to_end([7, 8, 9, 1, 2, 3, 4], 9) ➞ [7, 8, 1, 2, 3, 4, 9]
 move_to_end(["a", "a", "a", "b"], "a") ➞ ["b", "a", "a", "a"]
 '''
 
+def move_to_end(a,b):
+	d = 0
+	c = []
+	for i in a:
+		if i != b:
+			c.append(i)
+		else:
+			d = d + 1
+	for i in range(d):
+		c.append(b)
+	print(c)
+
+# move_to_end([7, 8, 9, 1, 2, 3, 4], 9)
+# move_to_end(["a", "a", "a", "b"], "a")
+
+########## Take list a input from user ####
+# n = int (input("Entter the no of elements"))
+# ip = []
+# for i in range(n):
+# 	x = int(input("Ener a no:-"))
+# 	ip.append(x)
+# print(ip)
 
 ############## Problem 5 #############
 
@@ -102,6 +124,17 @@ There will be exactly one space between the first and last name.
 '''
 
 
+s = "Donald Trump"
+def rev(s):
+	lst = s.split(' ')
+	return ' '.join(lst[::-1])
+
+# print(rev(s))
+
+
+
+
+
 ################ Problem 6 ################ 
 '''
 Create a function that takes a list of numbers between 1 and 10 (excluding one number) 
@@ -118,6 +151,19 @@ Notes
 The list of numbers will be unsorted (not in order).
 Only one number will be missing.
 '''
+
+# 55 - x = 50
+# x = 55 -50
+# def missing (l:list)->int:
+# 	for i in range(1,11):
+# 		if i  not in(l):
+# 			print(i)
+
+
+def missing_num(l):
+	return 55 - sum(l)
+	
+print("missing elenmets",missing_num([10, 5, 1, 2, 4, 6, 8, 7, 9]))
 
 
 ############ Prob 7 ##########
